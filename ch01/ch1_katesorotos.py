@@ -20,3 +20,7 @@ print(B)
 4**(1/2)
 str(6) + 'a'
 
+print(10/3)
+print(10%3)
+print('Hello')
+
