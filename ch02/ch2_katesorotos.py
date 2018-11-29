@@ -106,3 +106,8 @@ name=('Kate ' + 'Sorotos')
 f="Hello, {0}! ".format(name)
 print(f)
 print(f*5)
+
+test = 'hello'
+print(test + "\n") #print new line
+print() #another way of printing a new line
+print('\n') #print two new lines
