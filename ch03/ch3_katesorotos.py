@@ -194,3 +194,11 @@ def convert_temp2():
     return(fahrenheit, kelvin)
     
 fahrenheit, kelvin = convert_temp2()
+
+import math 
+print(math.pi)
+
+from math import pi 
+
+import pylab as pl 
+print(pl.pi)
