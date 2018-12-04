@@ -195,6 +195,20 @@ def convert_temp2():
     
 fahrenheit, kelvin = convert_temp2()
 
+def convert_distance(miles):
+   kilometers = (miles*8.0)/5.0
+   print ("Converting distance in miles to kilometers.")
+   print ("Distance in miles:", miles)
+   print ("Distance in kilometers:", kilometers)
+   return ('miles: '+ str(miles), 'kilometers'+str(kilometers))
+convert_distance(9.0)
+
+def square(value):
+    new_value = value ** 2
+    return new_value
+num = square(4)
+print(num)
+
 import math 
 print(math.pi)
 
