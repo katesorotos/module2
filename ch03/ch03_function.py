@@ -23,5 +23,27 @@ def convert_temp2():
     print("That's {} in fahrenheit and {} in kelvin.".format(fahrenheit, kelvin))
     return(fahrenheit, kelvin)
     
+# dice game 2
+import random
+min = 1
+max = 6
+import time
 
+name = input("What is your name? ")
+
+def dice():
+        player = input("Enter a number between 1 and 6: ")
+        print("You rolled " + str(player) )
+
+        computer = str(random.randint(min, max))
+        print("The computer rolls..." )
+        time.sleep(2)
+        print("The computer has rolled a " + str(computer) )
+  
+        if computer == player :
+            print("It's a draw",name.title()+"!")
+        if player > computer :
+            print("You won",name.title()+"!")
+        if player < computer :
+            print("Bad luck! You lost",name.title()+"!")
 

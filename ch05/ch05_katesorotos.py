@@ -4,124 +4,124 @@ Created on Wed Dec  5 10:10:30 2018
 
 @author: Kate Sorotos
 """
-#import time
-#
-#class Customer(object):
-#
-#    """A customer of ABC Bank with a checking account. Customers have the following properties:
-# Attributes:
-# name: A string representing the customer's name.
-# balance: A float tracking the current balance of the customer's account.
-# """
-##'self' is an undefined placeholder for object i.e 'customer 1' 
-##__init__ tells class what properties it should have/object's attributes/specifies data attributes
-##default arguments i.e 'balance=0.0' must be declared at the end
-# 
-#    def __init__(self, name, surname, balance=0.0, age=0):       
-#        """Return a Customer object whose name is *name* and starting  balance is *balance*."""        
-#        self.name = name      
-#        self.surname = surname
-#        self.balance = balance
-#        self.age = age
-#        
-##aboove variables used as input for function below        
-##'name', 'balance' 'age' and 'surnname' act as placeholders
-#
-##withdraw amount = input 
-##new balance = output        
-#    def withdraw(self, withdrawAmount):        
-#        """Return the balance remaining after withdrawing *amount* dollars."""       
-#        if withdrawAmount > self.balance:            
-#            raise RuntimeError('Amount greater than available balance.')
-#        else:
-#            self.balance -= withdrawAmount        
-#        return self.balance
-#    def deposit(self, amount):       
-#        """Return the balance remaining after depositing *amount* dollars."""       
-#        self.balance += amount        
-#        return self.balance 
-#    
-##object id = class name(attributes/values belonging to object/properties relating to object (dependednt on __init__))
-#        
-#customer1 = Customer('Kate', 'Sorotos', 1000.0, 23)
-#withdrawAmount = float(input("How much would you like to withdraw today? £"))
-#print("£", withdrawAmount)
-#print("New balance:",customer1.balance-withdrawAmount)
-#time.sleep(2)
-#print("Would you like to use another service? y/n")
+import time
+
+class Customer(object):
+
+    """A customer of ABC Bank with a checking account. Customers have the following properties:
+ Attributes:
+ name: A string representing the customer's name.
+ balance: A float tracking the current balance of the customer's account.
+ """
+#'self' is an undefined placeholder for object i.e 'customer 1' 
+#__init__ tells class what properties it should have/object's attributes/specifies data attributes
+#default arguments i.e 'balance=0.0' must be declared at the end
+ 
+    def __init__(self, name, surname, balance=0.0, age=0):       
+        """Return a Customer object whose name is *name* and starting  balance is *balance*."""        
+        self.name = name      
+        self.surname = surname
+        self.balance = balance
+        self.age = age
+        
+#aboove variables used as input for function below        
+#'name', 'balance' 'age' and 'surnname' act as placeholders
+
+#withdraw amount = input 
+#new balance = output        
+    def withdraw(self, withdrawAmount):        
+        """Return the balance remaining after withdrawing *amount* dollars."""       
+        if withdrawAmount > self.balance:            
+            raise RuntimeError('Amount greater than available balance.')
+        else:
+            self.balance -= withdrawAmount        
+        return self.balance
+    def deposit(self, amount):       
+        """Return the balance remaining after depositing *amount* dollars."""       
+        self.balance += amount        
+        return self.balance 
+    
+#object id = class name(attributes/values belonging to object/properties relating to object (dependednt on __init__))
+        
+customer1 = Customer('Kate', 'Sorotos', 1000.0, 23)
+withdrawAmount = float(input("How much would you like to withdraw today? £"))
+print("£", withdrawAmount)
+print("New balance:",customer1.balance-withdrawAmount)
+time.sleep(2)
+print("Would you like to use another service? y/n")
 
 #inheritance
-#class Animal():
-#    def __init__(self, name, age=0.0):
-#        self.name = name
-#        self.age = age 
-#    def eat(self):
-#        print('yum!')
-#        
-#class Dog(Animal):
-#    def __init__(self, name, age=0.0, barkNumber = 0):
-#        self.name = name
-#        self.barkNumber = barkNumber
-#        self.age = age
-#        
-#    def bark(self):
-#        print('Woof! '*self.barkNumber)
-#        
-#class Boxer(Dog):
-#    def __init__(self, name, colour, age=0.0, walks = 0, barkNumber = 0):
-#        Dog.__init__(self, name, age=0.0, barkNumber = 0)
-##       self.name = name
-##       self.barkNumber = barkNumber
-##       self.age = age
-#        self.colour = colour
-#        self.walks = walks
-#        #updates barkNumber to value input by user
-#    def updateBark(self, barkNumberinput):
-#        self.barkNumber = barkNumberinput
-#        return barkNumberinput
-#            
-#    def detectBark(self):
-#        if self.barkNumber >=3:
-#            print("Your dog wants a walk")
-#        else:
-#            print("Maybe your dog wants food")
-                
-#class Cat(Animal):
-#    def __init__(self, name, colour, age=0.0, meowNumber = 0):
-#        self.name = name
-#        self.age = age   
-#    def meow(self):
-#        print('Meow')
+class Animal():
+    def __init__(self, name, age=0.0):
+        self.name = name
+        self.age = age 
+    def eat(self):
+        print('yum!')
         
-##dog(animal)
-#Snoopy = Dog()
-#Snoopy.bark()
-#Snoopy.eat()
+class Dog(Animal):
+    def __init__(self, name, age=0.0, barkNumber = 0):
+        self.name = name
+        self.barkNumber = barkNumber
+        self.age = age
+        
+    def bark(self):
+        print('Woof! '*self.barkNumber)
+        
+class Boxer(Dog):
+    def __init__(self, name, colour, age=0.0, walks = 0, barkNumber = 0):
+        Dog.__init__(self, name, age=0.0, barkNumber = 0)
+#       self.name = name
+#       self.barkNumber = barkNumber
+#       self.age = age
+        self.colour = colour
+        self.walks = walks
+        #updates barkNumber to value input by user
+    def updateBark(self, barkNumberinput):
+        self.barkNumber = barkNumberinput
+        return barkNumberinput
+            
+    def detectBark(self):
+        if self.barkNumber >=3:
+            print("Your dog wants a walk")
+        else:
+            print("Maybe your dog wants food")
+                
+class Cat(Animal):
+    def __init__(self, name, colour, age=0.0, meowNumber = 0):
+        self.name = name
+        self.age = age   
+    def meow(self):
+        print('Meow')
+        
+#dog(animal)
+Snoopy = Dog()
+Snoopy.bark()
+Snoopy.eat()
 
 #boxer(dog)
-
+#
 #boxer1.eat()
 #boxer1.bark()
 #print(boxer1.age)
 #print(boxer1.name)
         
 
-#name = input("What is your dog's name? ")
-#colour = input("What colour is your dog? ")
-#age = int(input("What is your dog's age? "))
-#walks = int(input("How many walks does it need a day? "))
-#barkNumber = int(input("How many times a day does your dog bark? "))
-#
-#boxer1 = Boxer(name, age, colour, barkNumber, walks)
+name = input("What is your dog's name? ")
+colour = input("What colour is your dog? ")
+age = int(input("What is your dog's age? "))
+walks = int(input("How many walks does it need a day? "))
+barkNumber = int(input("How many times a day does your dog bark? "))
 
-#print(boxer1.updateBark(barkNumber))
+boxer1 = Boxer(name, age, colour, barkNumber, walks)
 
-#boxer1.detectBark()
+print(boxer1.updateBark(barkNumber))
 
-#cat(animal)
-#cat1 = Cat('Daisy', 14)
-#print(cat1.name)
-#cat1.meow()
+boxer1.detectBark()
+
+cat(animal)
+cat1 = Cat('Daisy', 14)
+print(cat1.name)
+cat1.meow()
 
 
 
