@@ -10,16 +10,25 @@ def DataBundlePurchase(truePasscode, balance):
         print('\nPassword OK')
         print('\nTo request your balance enter "1"')
         print('To purchase data enter "2"')
+        print('To top up your account enter "3"')
         print('\nWhich transaction would you like?' )
         print()
         transactionType = int(input('Please enter your choice: '))
         if transactionType == 1:
             print('Your balance is: £{}'.format(balance))
+            print('Would you like another service? ')
+            print('Type "y" for yes or "n" for no')
+            restart = input().lower()
+            if restart == 'y':
+                DataBundlePurchase(truePasscode, balance)
+            else:
+                print('Thanks, have a nice day!')
         elif transactionType == 2:
-            dataAmount(balance)
+            dataAmount(truePasscode, balance)
+        elif transactionType == 3:
+            topUp(truePasscode, balance)
         else:
             print('Error: please make your choice by entering "1" or "2"')
-
     else: 
         print('Password incorrect, would you like to try again? ')
         retryPassword(truePasscode, balance)
@@ -54,7 +63,7 @@ def checkNumber(balance):
         print('Numbers did not match' '\n' 'Transaction cancelled.')
     
 
-def dataAmount(balance):
+def dataAmount(truePasscode, balance):
     max = 100.00
     print('The maximum amount you are able to top up by is £100')
     print('Your top-up amount must be a multiple of 5')
@@ -71,10 +80,28 @@ def dataAmount(balance):
         print('Transaction cancelled')
     elif data == int(data/5)*5:
         print('Thanks for your purchase. You now have £' + str(new_balance) + ' left in your account.')
+        print('Would you like another service? ')
+        print('Type "y" for yes or "n" for no')
+        restart = input().lower()
+        if restart == 'y':
+            DataBundlePurchase(truePasscode, balance)
+        else:
+            print('Thanks, have a nice day!')
     else:
         print('Transaction type not recognised.')
     
+def topUp(truePasscode, balance):
+    print('\nYour current balance is £' + str(balance))
+    amount = int(input('How much would you like to top-up by today? £ '))
+    new_amount = balance + amount
     
-
-  
-        
+    print('You have topped up your account by £' + str(amount) + '\nYour balance is now £' + str(new_amount)) 
+    print('Would you like another service? ')
+    print('Type "y" for yes or "n" for no')
+    restart = input().lower()
+    if restart == 'y':
+        DataBundlePurchase(truePasscode, balance)
+    else:
+        print('Thanks, have a nice day!')
+    
+    
