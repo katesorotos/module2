@@ -11,8 +11,8 @@ from SimpleBundlePurchase import DataBundlePurchase
 print ('TEST EXAMPLE 1')
 # database input, you will still need to check user pin
 result = DataBundlePurchase('1234', 34.55)
-#print ('-----\nRESULT:', result)
-#print ('-' * 50, '\n')
+print ('-----\nRESULT:', result)
+print ('-' * 50, '\n')
 
 #print ('TEST EXAMPLE 2')
 #result = DataBundlePurchase('2345', -22.00)
