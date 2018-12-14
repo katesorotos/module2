@@ -67,6 +67,8 @@ def checkNumber(truePasscode, balance):
        dataAmount(truePasscode, balance)
     else: 
         print('Numbers did not match' '\n' 'Transaction cancelled.')
+
+
         return 'Incorrect number'
     
 

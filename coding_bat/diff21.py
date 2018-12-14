@@ -1,0 +1,14 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Dec 13 12:26:01 2018
+
+@author: Kate Sorotos
+"""
+
+Given an int n, return the absolute difference between n and 21, except return double the absolute difference if n is over 21.
+
+def diff21(n):
+  if n > 21:
+    return (n-21) *2
+  else:
+    return 21-n
