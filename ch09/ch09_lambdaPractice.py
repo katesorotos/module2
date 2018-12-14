@@ -4,7 +4,7 @@ Created on Thu Dec 13 13:53:43 2018
 
 @author: Kate Sorotos
 """
-
+    
 #Lambda
 a = [50,1,2,3,4,5,6,7,8,9]
 b = (0,1,2,3,4,5,6,7,8,9)
