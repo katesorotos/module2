@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Dec 18 11:52:10 2018
+Created on Tue Dec 18 16:08:41 2018
 
 @author: Kate Sorotos
 """
@@ -20,15 +20,13 @@ def guess(attempts, range):
         max_attempts -= 1 
         player_guess = int(input("Make a guess: "))
         print("Attempts made: " + str(attempt))
-        
+        print("You have " + str(max_attempts) + " attempts left")
         print("Result: ")
         
         if player_guess < number:
             print("No - Too low!")
-            print("You have " + str(max_attempts -1) + " attempt left")
         elif player_guess > number:
             print("No - Too high!")
-            print("You have " + str(max_attempts -1) + " attempt left")
         else:
             print("well done! You guessed it!")
             break 
