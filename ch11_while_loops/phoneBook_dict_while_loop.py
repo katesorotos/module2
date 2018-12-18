@@ -28,7 +28,7 @@ def addingPhonebookInfo(phonebook):
         print(phonebook)
         print()
         print("Students added: " + str(students))
-        return 'students added'
+       
 
     
 def sortAgain():
