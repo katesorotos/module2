@@ -10,8 +10,6 @@ Created on Wed Dec  5 10:10:30 2018
 ##############################################################################################
 ### Task 1 - using classes
 
-import time
-
 class Customer(object):
 
     """A customer of ABC Bank with a checking account. Customers have the following properties:
@@ -50,11 +48,9 @@ class Customer(object):
 #object id = class name(attributes/values belonging to object/properties relating to object (dependednt on __init__))
         
 customer1 = Customer('Kate', 'Sorotos', 1000.0, 23)
-withdrawAmount = float(input("How much would you like to withdraw today? £"))
+withdrawAmount = float(input("How much would you like to withdraw today? £ "))
 print("£", withdrawAmount)
 print("New balance:",customer1.balance-withdrawAmount)
-time.sleep(2)
-print("Would you like to use another service? y/n")
 
 ##############################################################################################
 ### Task 2 - Inheritance 
@@ -71,9 +67,18 @@ class Dog(Animal):
         self.name = name
         self.barkNumber = barkNumber
         self.age = age
-        
     def bark(self):
         print('Woof! '*self.barkNumber)
+    def trick(self):
+        print("*dog jumps up*")
+        
+class Cat(Animal):
+    def __init__(self, name, colour, age=0.0, meowNumber = 0):
+        self.name = name
+        self.age = age   
+    def meow(self):
+        print('Meow')
+        
         
 class Boxer(Dog):
     def __init__(self, name, colour, age=0.0, walks = 0, barkNumber = 0):
@@ -94,12 +99,6 @@ class Boxer(Dog):
         else:
             print("Maybe your dog wants food")
                 
-class Cat(Animal):
-    def __init__(self, name, colour, age=0.0, meowNumber = 0):
-        self.name = name
-        self.age = age   
-    def meow(self):
-        print('Meow')
         
 #dog(animal)
 #Snoopy = Dog()
@@ -121,9 +120,7 @@ walks = int(input("How many walks does it need a day? "))
 barkNumber = int(input("How many times a day does your dog bark? "))
 
 boxer1 = Boxer(name, age, colour, barkNumber, walks)
-
 print(boxer1.updateBark(barkNumber))
-
 boxer1.detectBark()
 
 #cat(animal)
@@ -145,6 +142,22 @@ class CookRobot(Robot):
 class PizzaRobot(CookRobot):
     def pizza(self):
         print("I cook the best pizza!!")
+        
+class Animal(): #superclass
+    def eat(self):
+         print('yum')
+class Dog(Animal): #subclass of Animal
+    def bark(self):
+        print('Woof!')
+ 
+##############################################################################################        
+        
+#class Robot(): #superclass
+#    def move(self):
+#        print('... move move move...')
+#class CleanRobot(Robot):  #subclass of Robot
+#    def clean(self):
+#        print('I vacuum dust')
 
 ############################################################################################## 
       
@@ -165,14 +178,14 @@ class Dog(Animal):
 class Boxer(Dog):
     def detect(self):
         if self.barkNumber>=3:
-            print('strenger coming!!!')
+            print('stranger coming!!!')
         
        
 name = input('what is your pet\'s name:')        
 age = int(input('what is your pet\'s age: '))
 bark = int(input('how many times you heard it barked: '))
 
-dog007 = DogAgent(name, age, bark) #always inheritant ancester's
+dog007 = Dog(name, age, bark) #always inheritant ancester's
 dog007.bark()
 dog007.eat()
 dog007.detect()
@@ -181,19 +194,6 @@ dog007.detect()
 ### Task 3 - association 
 #including objetcs from other classes
 
-class Animal(): #superclass
-    def eat(self):
-         print('yum')
-         
-class Dog(Animal): #subclass of Animal
-    def bark(self):
-        print('Woof!')
-class Robot(): #superclass
-    def move(self):
-        print('... move move move...')
-class CleanRobot(Robot):  #subclass of Robot
-    def clean(self):
-        print('I vacuum dust')
         
 class SuperRobot(): #includes objects from above classes 
     def __init__(self):
