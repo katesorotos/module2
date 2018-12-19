@@ -57,6 +57,9 @@ if number<=0:
 else:
     print("Don't know!")
 
+#first else statement practice 
+#final else will only catch above if statment
+    
 ##############################################################################################    
 ### Taks 5 - using elif statements 
 #order is important!
