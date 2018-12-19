@@ -4,6 +4,12 @@ Created on Wed Dec  5 10:10:30 2018
 
 @author: Kate Sorotos
 """
+
+"""Object Oriented Programming"""
+
+##############################################################################################
+### Task 1 - using classes
+
 import time
 
 class Customer(object):
@@ -11,8 +17,8 @@ class Customer(object):
     """A customer of ABC Bank with a checking account. Customers have the following properties:
  Attributes:
  name: A string representing the customer's name.
- balance: A float tracking the current balance of the customer's account.
- """
+ balance: A float tracking the current balance of the customer's account """
+
 #'self' is an undefined placeholder for object i.e 'customer 1' 
 #__init__ tells class what properties it should have/object's attributes/specifies data attributes
 #default arguments i.e 'balance=0.0' must be declared at the end
@@ -24,7 +30,7 @@ class Customer(object):
         self.balance = balance
         self.age = age
         
-#aboove variables used as input for function below        
+#above variables used as input for function below        
 #'name', 'balance' 'age' and 'surnname' act as placeholders
 
 #withdraw amount = input 
@@ -50,7 +56,9 @@ print("New balance:",customer1.balance-withdrawAmount)
 time.sleep(2)
 print("Would you like to use another service? y/n")
 
-#inheritance
+##############################################################################################
+### Task 2 - Inheritance 
+
 class Animal():
     def __init__(self, name, age=0.0):
         self.name = name
@@ -94,17 +102,17 @@ class Cat(Animal):
         print('Meow')
         
 #dog(animal)
-Snoopy = Dog()
-Snoopy.bark()
-Snoopy.eat()
-
+#Snoopy = Dog()
+#Snoopy.bark()
+#Snoopy.eat()
+#
 #boxer(dog)
 #
 #boxer1.eat()
 #boxer1.bark()
 #print(boxer1.age)
 #print(boxer1.name)
-        
+#        
 
 name = input("What is your dog's name? ")
 colour = input("What colour is your dog? ")
@@ -118,63 +126,59 @@ print(boxer1.updateBark(barkNumber))
 
 boxer1.detectBark()
 
-cat(animal)
-cat1 = Cat('Daisy', 14)
-print(cat1.name)
-cat1.meow()
+#cat(animal)
+#cat1 = Cat('Daisy', 14)
+#print(cat1.name)
+#cat1.meow()
 
+##############################################################################################
 
+class Robot():
+    def move(self):
+        print('... move move move...')
+class CleanRobot(Robot):
+    def clean(self):
+        print('I vacuum dust')
+class CookRobot(Robot):
+    def cook(self):
+        print("I'm a robot that likes to cook")
+class PizzaRobot(CookRobot):
+    def pizza(self):
+        print("I cook the best pizza!!")
 
-###########################
+############################################################################################## 
+      
+class Animal():
+    def __init__(self, name, age=0):
+        self.name = name
+        
+    def eat(self):
+         print('yum')
+         
+class Dog(Animal):
+    def __init__(self, name, age=0,barkNumber=0):
+        self.barkNumber = barkNumber
+        
+    def bark(self):
+        print('Woof! '*self.barkNumber)
+        
+class Boxer(Dog):
+    def detect(self):
+        if self.barkNumber>=3:
+            print('strenger coming!!!')
+        
+       
+name = input('what is your pet\'s name:')        
+age = int(input('what is your pet\'s age: '))
+bark = int(input('how many times you heard it barked: '))
 
-#class Robot():
-#    def move(self):
-#        print('... move move move...')
-#class CleanRobot(Robot):
-#    def clean(self):
-#        print('I vacuum dust')
-#class CookRobot(Robot):
-#    def cook(self):
-#        print("I'm a robot that likes to cook")
-#class PizzaRobot(CookRobot):
-#    def pizza(self):
-#        print("I cook the best pizza!!)
- 
-#############################
+dog007 = DogAgent(name, age, bark) #always inheritant ancester's
+dog007.bark()
+dog007.eat()
+dog007.detect()
 
-##Chen's code       
-#class Animal():
-#    def __init__(self, name, age=0):
-#        self.name = name
-#        
-#    def eat(self):
-#         print('yum')
-#         
-#class Dog(Animal):
-#    def __init__(self, name, age=0,barkNumber=0):
-#        self.barkNumber = barkNumber
-#        
-#    def bark(self):
-#        print('Woof! '*self.barkNumber)
-#        
-#        
-#class Boxer(Dog):
-#    def detect(self):
-#        if self.barkNumber>=3:
-#            print('strenger coming!!!')
-#        
-#        
-#name = input('what is your pet\'s name:')        
-#age = int(input('what is your pet\'s age: '))
-#bark = int(input('how many times you heard it barked: '))
-#
-#dog007 = DogAgent(name, age, bark) #always inheritant ancester's
-#dog007.bark()
-#dog007.eat()
-#dog007.detect()
-
-##############################
-#association - conposition 
+##############################################################################################
+### Task 3 - association 
 #including objetcs from other classes
 
 class Animal(): #superclass

@@ -8,7 +8,8 @@ Created on Tue Dec  4 13:59:09 2018
 
 """Conditionals"""
 
-### Logic operators
+##############################################################################################
+### Task 1 - logic operators
 print("this" == 'this')
 print(3 >= 4)
 print(3 >= 2)
@@ -34,7 +35,8 @@ if 5>=10:
 else:
     print(False)
 
-### Task 3 - using conditional statements
+##############################################################################################
+### Task 3 - using if statements
 number = input("Enter a number between 1 and 10: ")
 number = int(number)
 
@@ -44,7 +46,8 @@ if number<=0:
     print("Too low!")
 if 0 < number <= 10:
     print("Don't know!")
-    
+
+##############################################################################################   
 ### Task 4 - using else statments
  
 if number>10:
@@ -53,9 +56,10 @@ if number<=0:
     print("Too low!")
 else:
     print("Don't know!")
-    
+
+##############################################################################################    
 ### Taks 5 - using elif statements 
-# order is important!
+#order is important!
 
 age = 15
 
