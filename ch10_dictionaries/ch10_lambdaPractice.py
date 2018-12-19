@@ -74,3 +74,8 @@ print()
 #metals in descending order of experiments (v3)
 print(sorted(metals.items(), key = lambda kv:kv [1][2], reverse = True))
 print()
+
+#returns the third most valueable (v2) in descending order
+print(sorted(metals.items(), key = lambda kv:kv [1][2], reverse = True))[2]
+
+sorted(metals, reverse = True, key = lambda m:metals[m][1])

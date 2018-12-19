@@ -17,18 +17,19 @@ def guess(attempts, range):
     print("Can you guess my secret number? ")
     while attempt < max_attempts:
         attempt += 1
-        max_attempts -= 1 
+ 
         player_guess = int(input("Make a guess: "))
         print("Attempts made: " + str(attempt))
-        
+        print()
         print("Result: ")
+        
         
         if player_guess < number:
             print("No - Too low!")
-            print("You have " + str(max_attempts -1) + " attempt left")
+
         elif player_guess > number:
             print("No - Too high!")
-            print("You have " + str(max_attempts -1) + " attempt left")
+
         else:
             print("well done! You guessed it!")
             break 
