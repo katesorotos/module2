@@ -7,7 +7,7 @@ Created on Thu Nov 29 09:35:01 2018
 
 """Operations, Strings and Variables"""
 
-
+##############################################################################################
 ### Task 1 - simple operations
 5-6
 8*9
@@ -34,6 +34,7 @@ E=5.0/2
 F=2*(10+3)
 G=2*4
 
+##############################################################################################
 ### Taks 2 - practicing with varaibles
 age=5
 age="almost three"
@@ -41,6 +42,7 @@ age=29.5
 age='i really don\'t know!'
 print(age)
 
+##############################################################################################
 ### Task 3 - basic string manipulation 
 print('hello'+'world')
 print(("Joke \n") *3)
@@ -72,6 +74,7 @@ print(strExample)
 SplitStr=strExample.split(',')
 print(SplitStr)
 
+##############################################################################################
 ### Task 4 - string formatting
 age=5
 like="painting"
@@ -90,6 +93,7 @@ print(age_description2)
 basketball swimming
 tennis"""
 
+##############################################################################################
 ### Homework
 
 print(10/3)
