@@ -6,13 +6,15 @@ Created on Mon Dec  3 15:50:06 2018
 """
 """Functions and Importing modules"""
 
+##############################################################################################
 ### Task 2 - write a fucntion
 
 def hello_world():
     add2_2=2+2
     print("Hello World!")
     print (add2_2)
-    
+
+##############################################################################################    
 ### Task 4 - adding two numbers with a return
 
 def add_two_numbers_and_return_value(): 
@@ -23,6 +25,7 @@ def add_two_numbers_and_return_value():
     returned_value = add_two_numbers_and_return_value()
     print (returned_value) 
 
+##############################################################################################
 ### Task 5 - converting temperature
     
 def convert_temp(centigrade):
