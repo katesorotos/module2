@@ -6,9 +6,14 @@ Created on Mon Dec 17 16:42:49 2018
 """
 
 from MovingShapes import *
-frame = Frame()
+
+frame = Frame(300, 300)
 shape1 = Square (frame, 100)
+x = 0 
+y = 0
+
+
 for i in range(100):
     shape1.moveTick()
     
-    
+
