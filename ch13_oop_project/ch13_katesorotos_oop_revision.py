@@ -6,8 +6,9 @@ Created on Fri Dec 14 15:29:27 2018
 """
 
 """Revising classes"""
- 
-#Initialising the person class
+
+##############################################################################################
+## #Initialising the person class
 class Person:
     def __init__(self, firstName, secondName, age, gender):
         self.firstName = firstName
@@ -39,7 +40,7 @@ class Wizard(Person):
         Person.__init__(self, firstName, secondName, age, 'm')
     def spell(self):
         print('Expelliarmus!')
-    def greetingFFormal(self):
+    def greetingFormal(self):
         print('Welcome, Mr ', self.name, end=' ')
         print('- you\'re a fine Wizard!')
             
@@ -54,6 +55,9 @@ p1.greetingFormal() #'Welcome, Ms Kate'
 #Creating further instances/objects
 p2 = Person('Mia', 'Egle', 5, 'f')
 p3 = Person('Henri', 'Sorotos', 25, 'm')
+
+w1 = Wizard('Harry', 'Potter', 25, 'm')
+w1.spell()
 
 
 

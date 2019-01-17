@@ -13,6 +13,7 @@ class MovingShape:
         self.shape = shape
         self.diameter = diameter
         self.figure = Shape(shape, diameter)
+        self.frame = frame 
         
 #        self.x = 0
 #        self.y = 0
@@ -34,28 +35,27 @@ class MovingShape:
             self.dy = -5 + -10 * r()
                 
 #        self.goto(self.x, self.y)
+### adding random variation for the start positions
         
+        self.min_max_start(diameter)
         
 ### minimum and maximum start position of x and y
-        def min_max_start(self, diameter):
-            diameter_2 = diameter / 2
+    def min_max_start(self, diameter):
+        diameter_2 = diameter / 2
+    
+        self.minx = diameter / 2
+        self.maxx = self.frame.width - (diameter_2)
+    
+        self.miny = diameter / 2
+        self.maxy = self.frame.height - (diameter_2)
         
-            self.minx = diameter / 2
-            self.maxx = frame.width - (diameter_2)
-        
-            self.miny = diameter / 2
-            self.maxy = frame.height - (diameter_2)
-        min_max_start(self, diameter)
-              
-### adding random variation for the start positions
         self.x = self.minx + r () * (self.maxx - self.minx)
-        self.y = self.miny + r () * (self.maxy - self.miny)
+        self.y = self.miny + r () * (self.maxy - self.miny)       
         
     def goto(self, x, y):
         self.figure.goto(x, y)
         
     def moveTick(self):
-
 ### hitting the wall
         if self.x <= self.minx or self.x >= self.maxx:
             self.dx = (self.dx) * -1
