@@ -1,0 +1,11 @@
+body {
+  font-style: 'Spicy Rice', cursive;
+}
+body h1 {
+  font-size: 70px;
+  font-weight: bold;
+  padding: 40px;
+}
+body li {
+  font-size: 20px;
+}

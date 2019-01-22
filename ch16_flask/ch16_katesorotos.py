@@ -15,9 +15,7 @@ def home():
 
 @app.route("/about")
 def about_page():
-#    return "<body><h1>About Me</h1><h2>My name is Kate</h2></body>"
     return render_template("grace-hopper-bootstrap.html")
-
 
 @app.route("/news")
 def news_page():
@@ -26,7 +24,6 @@ def news_page():
 @app.route("/contact")
 def contact_page():
     return "<body><h1>Contact</h1><h2>If you would like to get in touch please contact us - </h2></body>"
-
 
 app.run(debug=True) #remember to have this at the end
 
