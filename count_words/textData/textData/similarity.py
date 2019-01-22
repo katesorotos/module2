@@ -62,8 +62,8 @@ def remove_duplicate_george_1(george_1_words):
         if item not in george_1_remove_duplicate:
             george_1_remove_duplicate.append(item)
             count_george_1 += 1
-    print(count_george_1)
-    print(george_1_remove_duplicate)
+#    print(count_george_1)
+#    print(george_1_remove_duplicate)
     return george_1_remove_duplicate
 
 george_1_remove_duplicate = remove_duplicate_george_1(george_1_words)
@@ -76,8 +76,8 @@ def remove_duplicate_george_2(george_2_words):
         if item not in george_2_remove_duplicate:
             george_2_remove_duplicate.append(item)
             count_george_2 += 1
-    print(count_george_2)
-    print(george_2_remove_duplicate)
+#    print(count_george_2)
+#    print(george_2_remove_duplicate)
     return george_2_remove_duplicate
 
 george_2_remove_duplicate = remove_duplicate_george_2(george_2_words)
@@ -90,12 +90,27 @@ def words_in_common(george_1_remove_duplicate, george_2_remove_duplicate):
         if item in george_2_remove_duplicate:
             count_words_in_common.append(item)
             count += 1
-    print(count)
-    print(count_words_in_common)
+#    print(count)
+#    print(count_words_in_common)
     return count
 
 count = words_in_common(george_1_remove_duplicate, george_2_remove_duplicate)
 
 ### Generates similarity score
-#def similarity_calculated(george_1_remove_duplicate, george_2_remove_duplicate, count):
+def similarity_calculated(text_1, text_2):
+    
+    similarity = count / (len(george_1_remove_duplicate) + len(george_2_remove_duplicate) - count)
+    rounded_similarity = round(similarity, 4)
+#    print(rounded_similarity)
+    print("compare: ({} <> {}) = {}".format(text_1, text_2, rounded_similarity))
+    
+similarity_calculated('george01.txt','george02.txt')
+#similarity_calculated('george01.txt','george03.txt')
+#similarity_calculated('george01.txt','george04.txt')
+#similarity_calculated('george02.txt','george03.txt')
+#similarity_calculated('george02.txt','george04.txt')
+#similarity_calculated('george03.txt','george04.txt')
+
+
+    
 
