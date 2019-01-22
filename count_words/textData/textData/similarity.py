@@ -98,15 +98,4 @@ count = words_in_common(george_1_remove_duplicate, george_2_remove_duplicate)
 
 ### Generates similarity score
 #def similarity_calculated(george_1_remove_duplicate, george_2_remove_duplicate, count):
-#    
-#    unique_words_1 = int(george_1_remove_duplicate[1])
-#    unique_words_2 = int(george_2_remove_duplicate[1])
-#    
-#    overlap = count/ (unique_words_1 + unique_words_2)
-#    overlap_percent = overlap * 100
-#    
-##    overlap = count / int((george_1_remove_duplicate) + int(george_2_remove_duplicate))
-#    print(overlap)
-#    print(overlap_percent)
-#    
-#similarity_calculated(george_1_remove_duplicate, george_2_remove_duplicate, count)
+
